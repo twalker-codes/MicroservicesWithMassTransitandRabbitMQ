@@ -1,1 +1,5 @@
 ContentPlatform/.idea
+ContentPlatform/Contracts/obj
+ContentPlatform/Newsletter.Api/obj
+ContentPlatform/Newsletter.Reporting.Api/obj
+ContentPlatform/Shared/obj
