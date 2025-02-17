@@ -1,36 +1,105 @@
-# MicroservicesWithMassTransitandRabbitMQ (Demo App)
+# 📦 Microservices with MassTransit & RabbitMQ 🐰  
+#### Building a Scalable Microservices Architecture with ASP.NET Core  
 
-The GitHub repository MicroservicesWithMassTransitandRabbitMQ provides a sample implementation of an ASP.NET Web API microservices architecture, utilizing MassTransit to facilitate communication with RabbitMQ. This setup demonstrates how to build scalable and decoupled applications by leveraging message-based communication between services.
+![Microservices](https://img.shields.io/badge/Microservices-ASP.NET_Core-blue)  
+![MassTransit](https://img.shields.io/badge/MassTransit-7.x-green)  
+![RabbitMQ](https://img.shields.io/badge/RabbitMQ-3.x-orange)  
+![License](https://img.shields.io/badge/License-MIT-lightgrey)  
 
-Key Components:
+🚀 This project demonstrates a microservices architecture using **ASP.NET Core**, **MassTransit**, and **RabbitMQ** for robust message-driven communication. It provides a practical implementation of **event-driven microservices**, enabling **scalability**, **loose coupling**, and **fault tolerance**.
 
-ASP.NET Web API: Serves as the framework for building HTTP-based services, enabling the creation of RESTful APIs.
+---
 
-MassTransit: A .NET-based Enterprise Service Bus (ESB) that simplifies the development of message-based applications. It supports various messaging patterns, including publish/subscribe, request/response, and sagas for complex workflows. 
-EN.WIKIPEDIA.ORG
+## ✨ Features  
+✔️ **Microservices-based architecture** with independent services  
+✔️ **MassTransit integration** for message handling and event-driven communication  
+✔️ **RabbitMQ as the message broker** for asynchronous messaging  
+✔️ **Docker support** for easy deployment  
+✔️ **Resilient communication** with retry and circuit breaker patterns  
+✔️ **Entity Framework Core** for database persistence  
+✔️ **Swagger UI** for easy API exploration  
 
-RabbitMQ: A robust message broker that facilitates the exchange of messages between different parts of an application, ensuring reliable and asynchronous communication.
+---
 
-By integrating MassTransit with RabbitMQ, the repository showcases how to implement effective communication strategies within a microservices architecture, promoting scalability, maintainability, and resilience in distributed systems.
+## 🛠 Tech Stack  
 
-<img width="1100" alt="microservices-project-setup" src="img/microservices-project-setup.png">
+| Category        | Technology |
+|----------------|-----------|
+| Backend        | ASP.NET Core 7+ |
+| Messaging      | MassTransit, RabbitMQ |
+| Database       | PostgreSQL (EF Core) |
+| API Docs       | Swagger (Swashbuckle) |
+| Containerization | Docker, Docker Compose |
 
+---
 
+## 📌 Setup & Installation  
 
-### Credits
+### 🔧 Prerequisites  
+Ensure you have the following installed before proceeding:  
+- [.NET SDK 7.0+](https://dotnet.microsoft.com/en-us/download)  
+- [Docker & Docker Compose](https://www.docker.com/get-started)  
+- [RabbitMQ (via Docker)](https://www.rabbitmq.com/download.html)  
 
-* ASP.NET Core Minimal API: https://learn.microsoft.com/en-us/aspnet/core/fundamentals/minimal-apis/overview?view=aspnetcore-9.0
-* MassTransit.RabbitMQ: https://www.nuget.org/packages/MassTransit.RabbitMQ
-* MediatR: https://www.nuget.org/packages/MediatR
-* Carter: https://www.nuget.org/packages/Carter
-* FluentValidation.DependencyInjectionExtensions: https://www.nuget.org/packages/FluentValidation.DependencyInjectionExtensions
+### 🚀 Installation Steps  
 
-* Mapster: https://www.nuget.org/packages/Mapster
-* Microsoft.EntityFrameworkCore.SqlServer: https://www.nuget.org/packages/Microsoft.EntityFrameworkCore.SqlServer
-* Microsoft.EntityFrameworkCore.Tools: https://www.nuget.org/packages/Microsoft.EntityFrameworkCore.Tools
-* Microsoft.VisualStudio.Azure.Containers.Tools.Targets: https://www.nuget.org/packages/Microsoft.VisualStudio.Azure.Containers.Tools.Targets
-* Swashbuckle.AspNetCore: https://www.nuget.org/packages/Swashbuckle.AspNetCore
+1️⃣ **Clone the repository**  
+\`\`\`sh
+git clone https://github.com/twalker-codes/MicroservicesWithMassTransitandRabbitMQ.git
+cd MicroservicesWithMassTransitandRabbitMQ
+\`\`\`
 
+2️⃣ **Run RabbitMQ using Docker**  
+\`\`\`sh
+docker-compose up -d
+\`\`\`
 
+3️⃣ **Run the microservices**  
+\`\`\`sh
+dotnet run --project Services/OrderService
+dotnet run --project Services/PaymentService
+\`\`\`
 
+4️⃣ **Verify the services**  
+- Open `http://localhost:5000/swagger` in the browser.  
+- Send test requests via Swagger UI.  
 
+---
+
+## 📡 API Endpoints  
+
+| Service       | Method | Endpoint               | Description                  |
+|--------------|--------|------------------------|------------------------------|
+| OrderService | \`GET\`  | \`/api/orders\`          | Get all orders               |
+| OrderService | \`POST\` | \`/api/orders\`          | Create a new order           |
+| PaymentService | \`POST\` | \`/api/payments\`       | Process a payment            |
+
+> 📌 **Note**: The endpoints communicate asynchronously via RabbitMQ.
+
+---
+
+## 📦 NuGet Packages  
+
+| Package | Description |
+|---------|-------------|
+| [MassTransit](https://www.nuget.org/packages/MassTransit/) | Distributed application framework for messaging |
+| [MassTransit.RabbitMQ](https://www.nuget.org/packages/MassTransit.RabbitMQ/) | RabbitMQ transport for MassTransit |
+| [Swashbuckle.AspNetCore](https://www.nuget.org/packages/Swashbuckle.AspNetCore/) | Swagger integration for API documentation |
+| [EF Core](https://www.nuget.org/packages/Microsoft.EntityFrameworkCore/) | ORM for database operations |
+
+---
+
+## 🤝 Contributing  
+
+Contributions are welcome! 🚀  
+1. Fork the repository  
+2. Create a feature branch (\`git checkout -b feature-name\`)  
+3. Commit changes (\`git commit -m "Add new feature"\`)  
+4. Push to the branch (\`git push origin feature-name\`)  
+5. Create a Pull Request  
+
+---
+
+## 📜 License  
+
+This project is open-source and available under the **MIT License**.  
