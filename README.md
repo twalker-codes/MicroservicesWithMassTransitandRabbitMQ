@@ -11,7 +11,7 @@
 ---
 
 ## ✨ Features  
-- ***Microservices-based architecture** with independent services  
+- **Microservices-based architecture** with independent services  
 - **MassTransit integration** for message handling and event-driven communication  
 - **RabbitMQ as the message broker** for asynchronous messaging  
 - **Docker support** for easy deployment  
