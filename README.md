@@ -11,13 +11,13 @@
 ---
 
 ## ✨ Features  
-✔️ **Microservices-based architecture** with independent services  
-✔️ **MassTransit integration** for message handling and event-driven communication  
-✔️ **RabbitMQ as the message broker** for asynchronous messaging  
-✔️ **Docker support** for easy deployment  
-✔️ **Resilient communication** with retry and circuit breaker patterns  
-✔️ **Entity Framework Core** for database persistence  
-✔️ **Swagger UI** for easy API exploration  
+- ***Microservices-based architecture** with independent services  
+- **MassTransit integration** for message handling and event-driven communication  
+- **RabbitMQ as the message broker** for asynchronous messaging  
+- **Docker support** for easy deployment  
+- **Resilient communication** with retry and circuit breaker patterns  
+- **Entity Framework Core** for database persistence  
+- **Swagger UI** for easy API exploration  
 
 ---
 
